@@ -1,0 +1,23 @@
+# Circuit Breaker ou Disjuntor
+
+É um mecanismo para proteger a arquitetura de falhas, atuando como proxy e fazendo a mediação entre o cliente e o serviço.
+Uma API Gateway também pode fazer a função de disjuntor.
+Imagine um cenário com microsserviços: Se a API Gateway fizer n requisições para os serviços e estes retornam falhas, o modo disjuntor é ativado e é bloqueado o recebimento de novas requisições no serviço. Este modo pode estar ativo por um tempo específico em um parâmetro determinado previamente, assim como o nº de requisições para ativar o modo.
+Quando o limite de tempo expira, o disjuntor permite que solicitações de teste passe. Se as solicitações forem bem sucedidas, o disjuntor retorna a operação normal. Caso contrário, o modo disjuntor é ativado normalmente com o tempo configurado.
+
+# Vantagens
+Protege o serviço de múltiplas chamadas quando este está indisponível.
+
+# Desvantagens
+Dificuldade para parametrizar com precisão sem causar uma "latência falsa" no sistema.
+
+# Observações
+Projeto de microsserviços deve considerar que a rede é instável e comunicações podem falhar.
+
+# Bibliotecas para suporte ao Disjuntor
+Java: github.com/Netflix/Hystrix
+Node: github.com/nodeshift/opossum
+.NET Core: github.com/App-vNext/Polly
+
+# Referências:
+Esquema visual do padrão disjuntor: https://martinfowler.com/bliki/CircuitBreaker.html
