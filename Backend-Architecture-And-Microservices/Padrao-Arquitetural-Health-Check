@@ -1,0 +1,18 @@
+# Como criar uma abordagem Health Check
+Para cada microsserviço, criar um endpoint para verificação de integridade. Este deve retornar a integridade do serviço, estes podem ser: Status das conexões como o estado do host, espaço em disco, disponibilidade do banco de dados, etc. 
+Também pode ser um serviço de monitoramento sendo chamado periodicamente e avaliando a situação de cada microsserviço pelas suas endpoints de Health Check.
+
+# Vantagens
+A integridade dos serviços podem ser testadas periodicamente, ocasionando rapidez na detecção de falhas.
+Ajuda no acompanhamento de serviços em ambiente de produção.
+
+# Desvantagens
+A instância de serviço pode falhar nas verificações de integridade.
+
+# Bibliotecas para suporte ao Health Check
+Java: actuator-service
+Node: express-healthcheck
+.NET Core: Extensão Diagnostics.HealtchChecks na versão a partir do .NET Core 2.2
+
+# Referências
+Esquema visual do padrão Health Check: docs.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring
