@@ -1,24 +1,33 @@
 # Tipos de Testes para Microsserviços
 Testar um sistema distribuído como microsserviços é mais desafiante do que testar aplicações monolíticas.
-De acordo com o conceito de pirâmide de testes, alguns testes devem ser mais focados que outros. A prioridade da implementação dos testes de acordo com a pirâmide é debaixo para
+De acordo com o conceito de pirâmide de testes, alguns testes devem ser mais focados que outros. A
+prioridade da implementação dos testes de acordo com a pirâmide é debaixo para
 cima. De acordo com o conceito, também é apresentado que quanto mais para cima, mais frágil é o teste.
 
 # Testes de Unidade
-Quanto menor for a unidade de testes, mais robusto e mais durável ele será ao longo do tempo. Os testes de unidade geralmente são em nível de classe. Este é o tipo de teste base do conceito de pirâmide de testes. O teste de unidade também auxilia como uma ferramenta de design, visto que será necessário quebrar o código em menores partes para o seu funcionamento ideal. Quando combinado com a abordagem TDD, é poderoso.
-
+Quanto menor for a unidade de testes, mais robusto e mais durável ele será ao longo do tempo. Os testes de unidade geralmente são em nível de classe. Este é o tipo de teste base do conceito de pirâmide de testes. O teste de unidade também auxilia como uma ferramenta de design, visto que será necessário quebrar o código em menores partes para o seu funcionamento ideal. Quando combinado com a abordagem TDD,
+é poderoso.
 Em uma arquitetura de microsserviços, pode-se utilizar o teste de unidade para cada camada individualmente, na qual cada uma pode ter vários testes de unidade. 
 
 # Testes de Integração
-Teste que verifica os caminhos de comunicação e as interações entre os componentes para detectar defeitos na interface. Checar a comunicação entre módulos diferentes. Checar chamadas RPC, chamadas para bancos de dados, testes que saiam da memória da própria aplicação fazendo chamadas para outros serviços, etc.
+Teste que verifica os caminhos de comunicação e as interações entre os componentes para detectar defeitos 
+na interface. Checar a comunicação entre módulos diferentes. Checar chamadas RPC, chamadas para bancos de
+dados, testes que saiam da memória da própria aplicação fazendo chamadas para outros serviços, etc.
 
 # Testes de componente (ou serviço)
 Teste da rotina completa dentro daquele serviço. Utiliza-se banco em memória para esse tipo de teste.
 
 # Testes de contrato
-Verifica se para cada tipo de cliente, o serviço atende o contrato esperado. Utilizando uma arquitetura BFF por exemplo, pode existir contratos diferentes para clientes mobile e web. Com o teste de contrato é verificado se o limite deste contrato está sendo atendido como esperado. Ex.: Clientes mobile não acessam rotina X mas acessam rotina Y. Clientes web não acessam rotina Y mas acessam rotina X. É um tipo particular de teste de integração.
+Verifica se para cada tipo de cliente, o serviço atende o contrato esperado. Utilizando uma arquitetura 
+BFF por exemplo, pode existir contratos diferentes para clientes mobile e web. Com o teste de contrato é 
+verificado se o limite deste contrato está sendo atendido como esperado. Ex.: Clientes mobile não acessam 
+rotina X mas acessam rotina Y. Clientes web não acessam rotina Y mas acessam rotina X. É um tipo 
+particular de teste de integração.
 
 # Testes de ponta a ponta (E2E)
-Testes que verificam o sistema de ponta a ponta, como se fosse o próprio usuário utilizando. É um teste feito a nível de interface e são mais voltados para os negócios. É um teste frágil que requer atenção e deve ser utilizado de forma mínima depois de implementar outros tipos de testes mais estáveis. 
+Testes que verificam o sistema de ponta a ponta, como se fosse o próprio usuário utilizando. É um teste 
+feito a nível de interface e são mais voltados para os negócios. É um teste frágil que requer atenção e 
+deve ser utilizado de forma mínima depois de implementar outros tipos de testes mais estáveis. 
 
 # Observações
 Considere a pirâmide de testes para estabelecer qualidade.
