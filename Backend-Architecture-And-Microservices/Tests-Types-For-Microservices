@@ -5,7 +5,10 @@ prioridade da implementação dos testes de acordo com a pirâmide é debaixo pa
 cima. De acordo com o conceito, também é apresentado que quanto mais para cima, mais frágil é o teste.
 
 # Testes de Unidade
-Quanto menor for a unidade de testes, mais robusto e mais durável ele será ao longo do tempo. Os testes de unidade geralmente são em nível de classe. Este é o tipo de teste base do conceito de pirâmide de testes. O teste de unidade também auxilia como uma ferramenta de design, visto que será necessário quebrar o código em menores partes para o seu funcionamento ideal. Quando combinado com a abordagem TDD,
+Quanto menor for a unidade de testes, mais robusto e mais durável ele será ao longo do tempo. Os testes 
+de unidade geralmente são em nível de classe. Este é o tipo de teste base do conceito de pirâmide de 
+testes. O teste de unidade também auxilia como uma ferramenta de design, visto que será necessário 
+quebrar o código em menores partes para o seu funcionamento ideal. Quando combinado com a abordagem TDD,
 é poderoso.
 Em uma arquitetura de microsserviços, pode-se utilizar o teste de unidade para cada camada individualmente, na qual cada uma pode ter vários testes de unidade. 
 
