@@ -1,4 +1,4 @@
-
+# Funcionamento do Garbage Collector no .NET
 
 .ToString(),
 .ToList()
