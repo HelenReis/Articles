@@ -24,21 +24,6 @@ plataforma "mata" os conteineres após alguns minutos que estão inativos. Entã
 chamadas 1x a cada hora, as inicializações podem ser mais demoradas pois toda vez serão inicializadas no 
 arranque a frio.
 
-# Exemplo
-Exemplo de aplicação repensada para rodar em modo Serverless:
-Cliente utiliza um serviço de autenticação (Baas). Ex.: Auth0
-Cliente utiliza contrata uma API Gateway na nuvem para fazer o intermédio entre cliente e serviço (Baas). 
-Ex.: Amazon API Gateway.
-Esta API Gateway utiliza Faas. Uma (Faas) para pesquisa. Ex.: AWS Lambda. Uma (Faas) para compras. Ex.: 
-Google Cloud Functions.
-Ambas funções utilizam bancos de dados em nuvem. Ex.: Amazon S3 ou Firebase.
-Em uma aplicação monolítica clássica, todo o fluxo desde controle e segurança é gerido pela aplicação da 
-loja no servidor.
-Em uma aplicação Serverless não existe um árbitro central. Cada componente tem um papel mais 
-arquitetonicamente ciente, na qual também remete à ideia de microsserviços.
-Por ser uma forma mais granular que microsserviços, esses serviços em Serverless também podem ser 
-conhecidos como nanosserviços.
-
 # Resumo
 Ciente das diferenças arquiteturais como implantação do código, escalabilidade, gestão do estado, tempo de execução, etc. 
 
