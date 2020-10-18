@@ -1,0 +1,12 @@
+# Tecnologias de Serverless
+Plataforma Azure Serverless: 
+docs.microsoft.com/en-us/dotnet/architecture/serverless/azure-serverless-platform - Possui Event Grid, na 
+qual é uma forma de gerenciar os eventos utilizados para executar as funções lambda, Logic Apps, na qual é 
+utilizado para fazer o design do workflow e orquestração das funções, e as Functions propriamente ditas.
+AWS:
+aws.amazon.com/pt/serverless/ 
+Landscape da iniciativa CNCF: (Catálogo de tecnologias serverless)
+landscape.cncf.io/format=serverless
+
+# Resumo
+Embora recente, existe um ecossistema de ferramentas que tem acelerado a adoção da computação sem servidor.
