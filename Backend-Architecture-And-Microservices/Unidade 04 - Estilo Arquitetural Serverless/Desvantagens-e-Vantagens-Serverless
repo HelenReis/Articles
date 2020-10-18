@@ -1,0 +1,29 @@
+# Desvantagens e vantagens da computação serverless
+
+# Vantagens
+- Ao utilizar serverless, o gerenciamento de servidores, bancos de dados e até mesmo lógica da aplicação fica 
+por conta dos serviços contratados. Então há redução de custos em infraestrutura, manutenibilidade e 
+economia de tempo.
+- Custo de desenvolvimento reduzido.
+- Custos de escala (O serviço é cobrado por uso de computação e não por períodos de tempo).
+- Implantação facilitada. (Uma solução totalmente sem servidor, utilizando FaaS e BaaS, requer uma 
+administração do sistema próxima de zero).
+- Tempo de mercado e experimentação contínua. (Com a implantação facilitada (ex. utilizando a abordagem 
+azul/verde, a experimentação contínua é feita de forma rápida em produção, sendo algo muito vantajoso para o 
+produto).
+
+# Desvantagens
+- Controle do fornecedor. (Abrir mão do controle do seu sistema para o fornecedor dos serviços serverless).
+- Aprisionamento ao fornecedor.
+- Preocupações com segurança. (Visto que várias implementações de segurança devido aos vários serviços 
+servless tendem a aumentar a complexidade).
+- Repetições de lógicas em plataforma cliente. (Visto que não há lógica personalizada escrita no lado 
+servidor, tudo é no cliente, então quando existe mais plataformas (IOS, web, android, etc.) há repetições 
+destes códigos de lógica.
+- Novo modelo de implementação. (Entender o modelo distinto de custeio, latência para iniciar os serviços, 
+tempo máximo de duração, ausência de estado, configuração mais limitada, depuração mais complexa, fatores 
+que devem ser compreendidos pelo time técnico).
+
+# Resumo
+Avaliar benefícios e malefícios antes de adotar o serverless.
+Conduzir provas de conceito.
