@@ -1,0 +1,9 @@
+# Casos de uso - Computação Serverless
+
+# Características
+Se calculado o custo de uma aplicação serverless com uma aplicação clássica, o custo do serverless compensa, 
+desde que não há a necessidade do custo de manter a aplicação e o servidor (práticas DevOps, custos de 
+locação de servidor, etc).
+
+# Referências
+Exemplo de arquitetura de web site em serverless utilizando FaaS e BaaS: simform.com/serverless-examples-aws-lambda-use-cases/
