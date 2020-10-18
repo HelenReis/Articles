@@ -1,0 +1,21 @@
+# Como calcular o custo da computação sem servidor
+
+# Fatores de custo BaaS
+Preço mensal de acordo com o plano que melhor atende de acordo com as especificações do dimensionamento da aplicação.
+Ex.: firebase.google.com/pricing
+
+# Fatores de custo FaaS
+Baseado no volume de minutos e memória utilizados por mês na infra contratada.
+Ex.: aws.amazon.com/pt/lambda/pricing (na página possui uma calculadora que faz o cálculo de acordo com a 
+memória alocada, tempo que a função gasta para executar e a quantidade de solicitações).
+
+# Calculadoras dos fornecedores
+AWS - aws.amazon.com/pt/lambda/pricing/
+Google - cloud.google.com/products/calculator/
+Azure - azure.microsoft.com/pt-br/pricing/calculator/
+Genérico - serverlesscalc.com
+
+# Resumo
+Custo de arquiteturas sem servidor exige atenção do time de arq. e monitoração contínua.
+A qualidade de código conta muito pois quanto mais aprimorado a execução do Baas ou FaaS mais barato será a 
+hospedagem do serviço.
