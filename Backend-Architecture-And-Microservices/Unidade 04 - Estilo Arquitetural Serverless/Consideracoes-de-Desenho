@@ -1,0 +1,20 @@
+# Considerações de Desenho para utilizar FaaS ou BaaS em Serverless
+1. Usar um serviço de computação p/ executar código sob demanda. Ex.: AWS Lambda.
+2. Escrever funções sem estado, com finalidade única. (Seguir o príncipio de responsabilidade única (SRP) 
+e gravar apenas funções que tenham uma única responsabilidade).
+3. Avaliar e adotar serviço de terceiros. (Reduzir a quantidade de código personalizado e adotar serviços 
+criados por outras pessoas, como BaaS como Autenticação, API Gateway, etc).
+4. Projetar pipelines baseados em push e orientados a eventos. (Fazer comunicação entre as funções e
+serviços de forma orientados à eventos).
+5. Não manter estado na memória (Usar armazenamento de dados temporário, seja em cache distribuído como 
+Redis ou em um banco).
+6. Considerar o uso de disjuntores (Circuit Breaker).
+7. Acelerar a implantabilidade (Uma abordagem comum é a utilização de implantações verde/azul, onde o 
+verde é a função atual em produção e a azul é a implantação que se testada e passada, é propagada para a 
+versão verde). Serviços em nuvem já costumam adotar esta abordagem.
+8. Reduzir dependências entre serviços. (Uma solução por exemplo, na chamada de endpoints, invés de 
+utilizar referências diretas entre eles, pode-se criar um registry fazendo a separação e fornecendo o 
+ponto final adequado para o tipo de pedido).
+
+# Resumo
+Experiências de estilos de microsserviços e cultura DevOps apoiam a arquitetura sem servidor.
