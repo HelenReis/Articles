@@ -1,0 +1,46 @@
+# Propriedades técnicas FaaS - Computação Serverless
+
+# Características modelo FaaS (Function as a service)
+- FaaS não requer codificação em uma linguagem ou framework específico. São aplicações regulares quando 
+se trata de linguagem e ambiente.
+- Em um ambiente FaaS o código da função é carregado para o provedor de FaaS.
+- A escalabilidade horizontal é automática (elástica e gerenciada pelo provedor de Faas). O provedor de 
+FaaS cria e destrói contêineres de execução a partir da necessidade de tempo de cada execução. Ou seja, 
+os contêineres são efêmeros.
+- Formas de acionar FaaS:
+Atualizações em arquivos, em bancos de dados, tarefas agendadas (como acontece em jobs por ex.), 
+mensagens adicionadas a filas de mensagens, acionamento HTTP (geralmente pelo API Gateway).
+- Funções não mantêm estados (são stateless). Se for necessário exteriorizar algum estado, é necessário 
+fazê-lo fora da instância da função.
+- Tempo de inicialização: Funções FaaS são limitadas em tempo de execução após sua invocação. Uma função 
+da AWS Lambda por exemplo, possui este tempo de 5 minutos. Se esta função não ser executada antes deste 
+tempo, na mesma deve ser realizado uma reengenharia e a função deve ser quebrada em mais pedaços para 
+poder ser utilizado como uma FaaS.
+- Latência de inicialização: A inicialização de uma plataforma FaaS funciona das formas:
+Arranque a frio: Quando é criado um novo contêiner hospedeiro que inicia e dispara o processo hospedeiro da função.
+Arranque a quente: Quando pode-se reusar uma função de lambda e seu conteiner hospedeiro a partir de um 
+evento anterior (após o mesmo já ter sido inicializado pela primeira vez), desde que geralmente a 
+plataforma "mata" os conteineres após alguns minutos que estão inativos. Então, se as funções FaaS são 
+chamadas 1x a cada hora, as inicializações podem ser mais demoradas pois toda vez serão inicializadas no 
+arranque a frio.
+
+# Exemplo
+Exemplo de aplicação repensada para rodar em modo Serverless:
+Cliente utiliza um serviço de autenticação (Baas). Ex.: Auth0
+Cliente utiliza contrata uma API Gateway na nuvem para fazer o intermédio entre cliente e serviço (Baas). 
+Ex.: Amazon API Gateway.
+Esta API Gateway utiliza Faas. Uma (Faas) para pesquisa. Ex.: AWS Lambda. Uma (Faas) para compras. Ex.: 
+Google Cloud Functions.
+Ambas funções utilizam bancos de dados em nuvem. Ex.: Amazon S3 ou Firebase.
+Em uma aplicação monolítica clássica, todo o fluxo desde controle e segurança é gerido pela aplicação da 
+loja no servidor.
+Em uma aplicação Serverless não existe um árbitro central. Cada componente tem um papel mais 
+arquitetonicamente ciente, na qual também remete à ideia de microsserviços.
+Por ser uma forma mais granular que microsserviços, esses serviços em Serverless também podem ser 
+conhecidos como nanosserviços.
+
+# Resumo
+Ciente das diferenças arquiteturais como implantação do código, escalabilidade, gestão do estado, tempo de execução, etc. 
+
+# Referências
+Landscape de ferramentas e código aberto para FaaS: landscape.cncf.io/format=serverless
