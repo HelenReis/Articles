@@ -1,0 +1,39 @@
+# Estilo Arquitetural Serverless
+
+Este é um estilo arquitetural recente em que não é necessário cuidar, enxergar um sistema operacional, 
+pois não terá acesso à máquinas físicas nem virtuais, nem containeres como Docker.
+O termo Serverless descreve aplicações que incorporam de aplicativos de terceiros e serviços hospedados 
+na nuvem para gerenciar a lógica do lado do servidor e do estado. Essas aplicações usam o ecossistema de 
+banco de dados em nuvem ou serviços de autenticação em nnuvem como AWS Cognito, Auth0, etc.
+Esse tipo de aplicação também pode significar aplicações em que o código da lógica é descrita pelo 
+desenvolvedor do aplicativo, mas ele é executado em conteineres de computação sem estado que são 
+acionados por eventos, tem vida efêmera e são geridas por terceiros. Estas funções são chamadas de FaaS 
+(Function as a service). 
+Baas e Faas são modelos que estão relacionados com o estilo arquitetural Serverless, desde que estes 
+modelos não há nenhuma gestão de recursos e são frequentemente utilizados em conjunto. 
+
+# Exemplo
+Exemplo de aplicação repensada para rodar em modo Serverless:
+Cliente utiliza um serviço de autenticação (Baas). Ex.: Auth0
+Cliente utiliza contrata uma API Gateway na nuvem para fazer o intermédio entre cliente e serviço (Baas). 
+Ex.: Amazon API Gateway.
+Esta API Gateway utiliza Faas. Uma (Faas) para pesquisa. Ex.: AWS Lambda. Uma (Faas) para compras. Ex.: 
+Google Cloud Functions.
+Ambas funções utilizam bancos de dados em nuvem. Ex.: Amazon S3 ou Firebase.
+Em uma aplicação monolítica clássica, todo o fluxo desde controle e segurança é gerido pela aplicação da 
+loja no servidor.
+Em uma aplicação Serverless não existe um árbitro central. Cada componente tem um papel mais 
+arquitetonicamente ciente, na qual também remete à ideia de microsserviços.
+Por ser uma forma mais granular que microsserviços, esses serviços em Serverless também podem ser 
+conhecidos como nanosserviços.
+
+# Resumo
+Nenhum sistema operacional p/ configurar ou gerenciar.
+Modelo de faturamento de pagamento por invocação (uso).
+Capacidade de dimensionamento automático com o uso.
+Disponibilidade incorporada e tolerância a falhas.
+
+# Referências
+Página de computação sem servidor da AWS: aws.amazon.com/pt/serverless/
+Artigo com mais detalhes: 
+medium.com/swlh/serverless-architecture-complete-reference-guide-2019-55363c08d1be
