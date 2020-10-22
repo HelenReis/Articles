@@ -1,0 +1,37 @@
+Principais estilos arquiteturais web:
+Web 2.0
+SPA
+API
+Microsserviços
+Computação Serverless
+
+Web 2.0:
+Vantagens 
+Amplamente disseminado, alta mão de obra.
+Desvantagens
+Pode apresentar problemas de desempenho se todo o código controlador ficar no servidor. Ex.: ASP.NET MVC ou MVC do Java JSF. 
+Pode ser implementado com o padrão MVC ou MVVM.
+
+SPA:
+Vantagens
+Muito performático p/ aplicações responsivas, conta com um bom suporte de frameworks. Reutiliza código DOM sem precisar ficar requisitando páginas completas.
+Desvantagens
+Requer uso do padrão MVVM.
+
+Web API:
+Vantagens
+Simples, apropriado p/ criar reuso de código servidor em ambientes Web e móveis. 
+Desvantagens
+Requer atenção a padrões de desenho de APIs e pede em médio prazo a introdução de uma API Gateway.
+
+Microsserviços
+Vantagens
+Apropriado p/ acelerar o desenvolvimento, reduzir complexidade de código e prover escalabilidade sob demanda em ambientes de produção. Permite a evolução tecnológica.
+Desvantagens
+Traz complexidades operacionais em produção e apresenta testes mais desafiantes, por ser distribuído. Junto com microsserviços, é esperado também o uso do estilo API Web e um API Gateway.
+
+Computação sem Servidor (Serverless)
+Vantagens
+Apropriado p/ execução de tarefas sem demanda e para a redução do custo de provisionamento e administração de máquinas virtuais.
+Desvantagens
+Algum aprisionamento tecnológico de fornecedores. É esperado também o uso do estilo API Web e um API Gateway.
