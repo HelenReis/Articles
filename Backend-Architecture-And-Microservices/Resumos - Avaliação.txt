@@ -1,0 +1,34 @@
+Microsserviços:
+- O SpringBoot, Python Flask, PHP Lumen e o ASP.NET Core são mais ajustados para arquiteturas de microsserviços porque podem operar sem servidores de aplicação complexos como o IIS ou JBOSS AS.
+- O Docker é uma tecnologia já muito utilizada para implantar microsserviços pois ela permite isolar dependências em tempo de execução, além de facilitar os testes.
+- O Netflix Eureka é usado para descoberta e registro de serviços. O API Gateway da Netflix é o Zuul.
+- O Netflix Hystrix pode ser usado para implementar tolerância a falhas e o padrão Circuit Breaker em arquiteturas de microsserviços.
+- Alguns microsserviços podem realizar computações de longa duração ou exigir servidores complexos para a sua operação. E esses microsserviços não seriam apropriados para operar como FAAS.
+- Microsserviços possuem uma diferença fundamental de FAAS que é sua independência de ambientes de nuvem. Microsserviços podem ser operados on-premises, se necessário. Já a computação sem servidor exige uma nuvem, pública ou privativa.
+
+Serverless:
+Tecnologias foram criadas para suportar o estilo de computação serverless:
+- IBM OpenWhisk,  Amazon Lambda e Google Functions 
+
+A computação sem servidor promete reduzir desperdícios com servidores ociosos ou super-dimensionados e se tornar uma oferta mais vantajosa para diversos tipos de cenários de negócio:
+Sobre o seu modelo de precificação, podemos dizer que:
+- Ela é baseada nos ciclos de computação usados em milissegundos e memória usada. Mas os servidores subjacentes usados são transparentes e não são cobrados. (Espaço de armazenamento em disco não é cobrado. Apenas computação.)
+
+- Os desafios complexos de testabilidade de microsserviços são também presentes na computação sem servidor.
+
+Estilo e Tecnologias de Web Services e APIs:
+O ASP.NET Web API é uma tecnologia da Microsoft especialmente desenhada para a construção de APIs. Podemos dizer sobre esta tecnologia:
+- Que ela suporta HTTP e pode ser disponibilizada também em Linux e MAC se construída sobre o NET Core (O ASP.NET Web API pode rodar sobre a máquina do .NET Core, que roda sobre Linux também).
+
+O JAX-WS é a especificação Java para suporte  a SOAP. Sobre esta tecnologia, podemos dizer que:
+- Tem suporte a diversos tipos de implementações WS-*, como por exemplo o Apache CXF ou o JBOSS Web Services. (O JAX-WS é uma especificação e existem hoje diversas implementações de Web Services SOAP no mercado que suportam esta tecnologia).
+
+O JAX-RS é a especificação Java EE para suporte a REST/HTTP. Sobre esta especificação, podemos dizer que:
+- Ela está disponível em servidores Web Java EE, servidores de aplicação Java EE e até mesmo em ambientes leves como o Spring Boot e o Zeus.
+(O Apache Tomcat, WebSphere Application Server, entre outros servidores Java EE já tem suporte ao JAX-RS desde o Java EE 6.0. Os conteineres leves como o Spring Boot também suportam esta tecnologia, que é base para a construção de microsserviços).
+
+- É possível expor serviços SAP como APIs e para isso existem tecnologias como o BAPI ou barramentos como o SAP PI (Process Integration).
+
+O estilo arquitetural de APIs está em alta. Ele permite que a exposição de serviços Web em protocolos  como o SOAP, HTTP, XML e JSON. Para HTTP ele ainda dá suporte ao estilo arquitetural REST. Sobre este estilo:
+- Pode ser implementado em tecnologias como o ASP.NET Web API, Servlets ou PHP Simfony. 
+- É possível expor serviços SAP como APIs e para isso existem tecnologias como o BAPI ou barramentos como o SAP PI (Process Integration).

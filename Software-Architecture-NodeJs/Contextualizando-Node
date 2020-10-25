@@ -1,0 +1,22 @@
+#Contextualizando Node.JS
+
+Ambiente de execução (plataforma) de JS no servidor
+
+#Framework 
+Pedaço de código feito por outra pessoa para reaproveitarmos em nossas aplicações.
+
+#Plataforma 
+O quê possibilita a execução de frameworks e linguagens
+
+#Observações
+Linguagem JS depende de uma Engine (interpretador) para ser executada - o browser;
+Como havia muita utilização do JS (muitas pessoas sabem a linguagem), houve a curiosidade de poder usá-la também para uma aplicação no lado servidor.
+
+#Plataforma Deno 
+Novo projeto de plataforma para executar JS no servidor, feita para corrigir problemas do NodeJS.
+
+#Motivos para grande adoção do Node
+- Redução de curva de aprendizado.
+- Flexibilidade em encontrar pessoas que sabem JS.
+- Ambiente com boa performance de execução (em vários benchmarks).
+- Plataforma é open souce e cross-platform (portabilidade) e (código do Node é open souce).
