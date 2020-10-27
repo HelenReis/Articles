@@ -1,7 +1,4 @@
-#Visão geral NPM
-- É o gerenciador de pacotes (ou módulos) para a linguagem javascript.
-- Toda linguagem de programação precisa de uma forma de compartilhamento de pacotes:
-C# => Nuget
-Java => Maven
-Composer => PHP
-JavaScript (Node) => NPM
+#Instalando pacotes NPM
+- npm i moment 
+- Pacotes instalados pelo npm ficam dentro do node_modules que apresenta os códigos desses módulos de terceiros instalados.
+- Dentro do package.json na propriedade 'dependencies' apresentará os pacotes instalados para serem usados pelo require;

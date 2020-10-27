@@ -1,0 +1,17 @@
+#Criando um pacote NPM
+
+#Exportando mais de uma função no módulo por arquivo
+
+subtracao() {
+	return;
+} 
+
+adicao() {
+	return ;
+}
+
+module.exports = { /*Exporta um objeto JSON com as funções*/
+	sub: subtracao,
+	add: adicao
+}
+
