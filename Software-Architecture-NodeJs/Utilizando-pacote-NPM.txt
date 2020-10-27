@@ -1,0 +1,7 @@
+#Visão geral NPM
+- É o gerenciador de pacotes (ou módulos) para a linguagem javascript.
+- Toda linguagem de programação precisa de uma forma de compartilhamento de pacotes:
+C# => Nuget
+Java => Maven
+Composer => PHP
+JavaScript (Node) => NPM
