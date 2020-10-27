@@ -1,0 +1,4 @@
+#Iniciando
+
+#Comandos
+- npm init -y //Criar o projeto node com o package.json

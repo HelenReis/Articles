@@ -1,0 +1,27 @@
+#V8 Engine
+
+#Por trás das cortinas na hora de executar uma aplicação com Node.JS
+- Proposta de maximização dos recursos;
+- V8 Engine
+- Entender o mecanismo de Event Loop
+
+#Node.JS
+- Node.JS foi construído baseado no motor de interpretação de código JS V8 engine do Chrome.
+- Arquitetura "Single Thread";
+- Código fonte baseaco em C++;
+- Apesar de utilizar a engine V8, as APIs do browser não estão disponíveis;
+- Node.JS fornece sua própria API;
+- Arq. inicial do Node possui uma única thread (single thread), que promove menor uso de memória e recursos, menor complexidade e fim dos deadlocks (situação em que ocorre um impasse e dois ou mais processos ficam impedidos de continuar suas execuções, ficam bloqueados esperando uns pelos outros).
+
+#Como fluxos assíncronos são possíveis em arquitetura single thread?
+- Arquitetura é baseada em eventos;
+- Entrada non blocking I/O;
+- Entender funções callback é importante. (Funções callback são chamadas com chamadas de eventos).
+
+#Arquitetura multi-thread
+- A medida que requisições vão chegando, a plataforma cria sub processos (threads) para tratar todas as requisições que chegam na máquina. Isso consome mais memória e mais recursos e em certo período de tempo esse limite de threads ocupadas pode ser alcançado. Ex.: IIS, Apache.
+
+#Arquitetura Node.js
+- Existe uma pilha de chamadas (CallStack) na qual possui todas as funções (comandos do código) a serem processados pelo motor V8 Javascript Engine. Cada item dessa pilha é chamado através do loop de eventos (Event Loop) para operar em uma única thread. Quando é um código assíncrono, por baixo dos panos é chamado a partir da single thread a biblioteca assíncrona libuv (escrita em c++) que executa essas solicitações em uma thread pool e quando cada solicitação estiver pronta, a libuv coloca os retornos em uma fila de eventos (Event Queue) e chama a single thread através de um evento, colocando os retornos na single thread novamente.
+
+Imagem fonte arquitetura node: nodejs.org

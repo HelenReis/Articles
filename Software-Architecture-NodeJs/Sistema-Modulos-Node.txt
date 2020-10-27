@@ -1,0 +1,18 @@
+#Sistema de módulos em Node
+
+#Módulos (ou pacotes)
+- São fragmentos de código em JS que podem ser reaproveitados por outras pessoas.
+- Existem dois tipos de módulos:
+	- Módulos internos da plataforma (API do Node) que já vem com o Node instalado. Feitos pelas pessoas que desenvolveram o Node.
+	- Módulos públicos (ou privados) disponibilizados externamente.
+	
+#É possível exportar qualquer coisa através de um módulo em Node.JS, como texto, número, objeto, funções, classes...
+- module.exports = (x, y) => x + y;
+- De onde vem o 'module.exports'? 
+	Todo arquivo JS processado por Node é incluído dentro de uma função 'wrapper'.
+	Essa função é a seguinte:
+	(function(exports, require, module, __filename, __dirname) { //Código do módulo aqui }
+	Então todos os arquivos também possuem acesso estes parâmetros, e colocá-lo no exports do module é uma forma de exportá-lo para toda a aplicação node.
+- Como chamar um módulo exportado
+	const sum = require('./sum.js'); //um módulo que exporta uma função. Observa-se que o 'require' da função wrapper é utilizado para encontrar os módulos exportados.
+	const result = sum(1, 2);

@@ -1,0 +1,22 @@
+#Breve Revisão
+
+#Características
+Linguagem de alto nível. (Não precisa gerenciar recursos de hardware).
+Pouco verbosa.
+Tipagem fraca (dinâmica).
+Linguagem interpretada - (Embora algumas engines JS compilam JS p/ gerar código de máquina, geralmente é interpretada por uma Engine).
+Composta por vários paradigmas. (O.O. ou Funcional, por exemplo).
+
+#Funções de alta ordem
+Uma função pode receber como parâmetro outra função.
+Ex.: 
+const myFunction = function(texto) {...}
+function run(f) {...}
+run(myFunction);
+
+#Funções assíncronas
+function wait3Seconds(text) {
+setTimeout(() => console.log(text), 3000};
+wait3Seconds("Oi");
+console.log("oi"); // vai ser executado no console primeiro.
+Node.JS possui arquitetura single thread, de forma assíncrona deve criar diferentes threads (processos). (Anotação lembrada do TCC).

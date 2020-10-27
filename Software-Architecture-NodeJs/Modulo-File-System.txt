@@ -1,0 +1,11 @@
+#Usando o módulo interno do Node: File System
+const fs = require('fs');
+
+fs.mkdir('./teste', () => console.log("Criado diretorio teste")); //Segundo parâmetro é um callback
+
+fs.writeFile('./teste/abcd.txt', "Ola tudo bem?", () => console.log("Criei um novo arquivo no diretorio teste com nome abcd.txt"));
+
+fs.readFile('./teste/abcd.txt', (err, data) => console.log('no arquivo está escrito: ', data.toString()));
+
+#Comandos
+- npm init -y //Criar o projeto node com o package.json
