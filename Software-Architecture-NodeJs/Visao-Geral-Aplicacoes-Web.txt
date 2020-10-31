@@ -1,0 +1,5 @@
+#Visao Geral
+
+#Protocolo HTTP
+Hypertext Transfer Protocol, é um protocolo de comunicação utilizado para sistemas de informação de hipermídia, distribuídos e colaborativos. Ele é a base para a comunicação de dados da World Wide Web.
+(Define como será a transferência dos hipertextos através da rede, visto que a rede é uma cadeia de arquivos hipertextos que conversam entre si).

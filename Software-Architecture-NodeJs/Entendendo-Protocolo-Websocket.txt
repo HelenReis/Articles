@@ -1,0 +1,18 @@
+#Protocolo Websocket - Conexão persistente
+
+#Como surgiu
+- Da necessidade do servidor se comunicar ativamente com o cliente (sem a necessidade de requisições do cliente). Mas tanto cliente quanto servidor podem se comunicar ativamente um com o outro. Existe um protocolo na camada de Aplicação que define esse tipo de comunicação. É o Protocolo Websocket.
+- Websocket é um protocolo de comunicação utilizado para permitir uma comunicação persistente e bidirecional (full duplex) entre servidores e clientes. Ele é um protocolo de aplicação, assim como o HTTP, e funciona "sobre" a camada de protocolos TCP/IP.
+- Uma conexão Websocket inicia-se a partir de uma requisição HTTP específica (Upgrade). Ou seja, o protocolo Websocket aproveita do protocolo padrão da web para funcionar.
+
+#Características
+- Redução da carga de trabalho do servidor para operações longas ou em casos de eventos em tempo real;
+- Aumentar a velocidade da comunicação entre as partes;
+- Redução da banda necessária para enviar grandes massas de dados;
+
+#Casos de uso
+- Jogos online (em tempo real) com múltiplos jogadores;
+- Aplicações de chat
+- Aplicações de transmissões
+- Atualização em tempo real de eventos
+- Edições colaborativas

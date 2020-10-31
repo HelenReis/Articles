@@ -1,0 +1,6 @@
+#Middlewares
+
+- Com o express, pode-se criar rotas e ouvir a porta do servidor.
+- Middlewares são blocos de códigos (funções) que podem ser encadeadas no fluxo de execução (pipeline) de uma aplicação web. Essa é uma forma organizada de expandir as ações realizadas por um serviço Web a cada nova requisição.
+- De forma geral, um middleware tem acesso ao objeto que representa a requisição enviada pelo cliente, bem como a resposta que será enviada pelo servidor.
+- Exemplo: Requisição é recebida através do protocolo http e então primeiro passa pelo middleware de CORS, depois o de CSRF, depois o de Auth e por último chega na rota pretendida.

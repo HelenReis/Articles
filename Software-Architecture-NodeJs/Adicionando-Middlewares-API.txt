@@ -1,0 +1,11 @@
+#Adicionando Middlewares
+
+- Exemplo implementação de um próprio middleware:
+const logMiddleware = (req, res, next) => {
+	console.log("API recebeu alguma informação");
+	next(); //Deve-se chamar o next() para dar continuidade à requisição ou para o próximo middleware. Sem o next() a requisição fica parada.
+}
+
+app.use(logMiddleware); // Antes de cada requisição será printado o que está neste middleware;
+
+- Também é possível utilizar middlewares de terceiros incluindo da mesma forma.

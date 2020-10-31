@@ -1,0 +1,6 @@
+#Como Websocket Funciona
+- Cliente envia uma requisição do protocolo HTTP com o atributo de "Upgrade" que significa que aquele cliente quer manter uma conexão persistente com aquele servidor através do protocolo de comunicação websocket, e então começa uma conexão bidirecional.
+- Quando faz a requisição com o atributo Upgrade: websocket para o servidor para pedir uma conexão websocket, a url seria assim: ws://example.com/chat (protocolo ws ou wss como no protocolo http ou https).
+- Mapa de compatibilidade para verificar browsers que aceitam websocket: caniuse.com (pesquisar por websocket).
+- Para explorar demos e mais informações sobre o protocolo Websocket:
+	http://websocket.org/
