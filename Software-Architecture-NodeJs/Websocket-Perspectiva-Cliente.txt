@@ -1,0 +1,4 @@
+#Websocket na perspectiva do servidor
+Comandos:
+- npm install express
+- npm install ws

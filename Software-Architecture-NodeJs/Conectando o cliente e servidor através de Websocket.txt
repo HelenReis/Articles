@@ -1,0 +1,2 @@
+#Conectando
+- No devtools => network => ws é possível verificar envios e recebidos no protocolo WebSocket.
