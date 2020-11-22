@@ -1,0 +1,27 @@
+#Máxima da arquitetura de software
+- Baixo acoplamento: dependência entre os elementos 
+- Alta coesão: quão especializada é cada parte, um único e bem definido objetivo
+
+#Engenharia de Software x Arquitetura de Software
+- Engenharia: Processo de criação de software, gira em torno de todas as etapas para criação do software: Metodologia ágil, entregas contínuas, documentação, tarefas e comunicação com usuários, entre o time, etc. (Requer uma veia mais humana).
+- Arquitetura: Técnica de desenho de software: Padrões de projeto, frameworks e protocolos. (Requer veia mais técnica).
+- Engenharia sabe o modo de fazer. Arquitetura define como fazer.
+
+# Microsserviços é mais aderente à metodologias ágeis e entregas contínuas
+
+# Arquitetura de acordo com a infraestrutura
+- Onde o software vai rodar? Servidores (nuvem, containers, serviços, internos)
+- Em qual rede/telecom os dados vão ser trafegados para chegar ao software? (Lora, LPWA, Wi-Fi, 4G, Fibra Óptica). Cada tipo de rede suporta um tamanho maior ou menor de tráfego de dados.
+- De qual interface será acessado o software? (Smartphones, computadores, IoT (semáforos, etc), wearables)
+ 
+ # Arquitetura é parcialmente empírica 
+ - Ex.: Eu já vi este cenário em outro projeto...
+ 
+ # Padrões de projeto
+ - Existem 23 ou 24 padrões de acordo com a fonte pesquisada.
+ - Padrões de criação:
+ Abstraem e adiam a forma com que os objetos são criados. Ajudam a tornar um sistema independente de como seus objetos são criados, compostos e representados. Ajudam a tornar um sistema independente de como seus objetos são criados, compostos e representados. Ex.: Padrão Singleton (garante a existência de apenas uma instância de classe, mantendo ponto global de acesso).
+ - Padrões estruturais:
+ Como as classes e objetos são compostos. Organização interna das classes. Ex.: Padrão Business Delegate (Separar a camada de apresentação da camada de negócios, reduzir o acoplamento entre as camadas)
+ - Padrões comportamentais:
+ Delegação de responsabilidades. Padrões de comunicação entre objetos. Ex.: Padrão Command (Encapsular toda informação necessária para executar uma ação)
